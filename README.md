@@ -2,13 +2,13 @@
 
 This repository is example of Go ORM.
 
-- gorm
+- gorm  
 https://github.com/jinzhu/gorm
 
-- gorp
+- gorp  
 https://github.com/go-gorp/gorp
 
-- sqlx
+- sqlx  
 https://github.com/jmoiron/sqlx
 
 ## License
