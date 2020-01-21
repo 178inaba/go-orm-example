@@ -1,0 +1,1 @@
+CREATE DATABASE orm_test CHARACTER SET utf8mb4;
