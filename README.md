@@ -7,6 +7,13 @@ Use as example in Lightning Talk on [DeNA.go #4](https://dena.connpass.com/event
 - [gorp](https://github.com/go-gorp/gorp)
 - [sqlx](https://github.com/jmoiron/sqlx)
 
+## Setup
+
+```console
+$ mysql -u root -h 127.0.0.1 < misc/queries/create_database.sql
+$ mysql -u root -h 127.0.0.1 orm_test < misc/queries/ddl.sql
+```
+
 ## License
 
 [MIT](LICENSE)
