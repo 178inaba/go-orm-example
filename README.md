@@ -11,7 +11,7 @@ Use as example in Lightning Talk on [DeNA.go #4](https://dena.connpass.com/event
 
 ```console
 $ mysql -u root -h 127.0.0.1 < misc/queries/create_database.sql
-$ mysql -u root -h 127.0.0.1 orm_test < misc/queries/ddl.sql
+$ mysql -u root -h 127.0.0.1 go_orm_example < misc/queries/ddl.sql
 ```
 
 ## License

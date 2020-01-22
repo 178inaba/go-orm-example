@@ -1,1 +1,1 @@
-CREATE DATABASE orm_test CHARACTER SET utf8mb4;
+CREATE DATABASE go_orm_example CHARACTER SET utf8mb4;
