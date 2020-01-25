@@ -21,7 +21,6 @@ func main() {
 	ctx := context.Background()
 
 	var us []User
-
 	if err := dbx.SelectContext(ctx, &us, `
 SELECT
   id
@@ -34,6 +33,33 @@ FROM
 		log.Fatal(err)
 	}
 
+	var as []Address
+	if err := dbx.SelectContext(ctx, &as, `
+SELECT
+	id
+	, user_id
+	, zip_code
+	, prefecture
+	, address_1
+	, address_2
+	, phone_number
+	, created_at
+	, updated_at
+	, deleted_at
+FROM
+  addresses`); err != nil {
+		log.Fatal(err)
+	}
+
+	am := map[uint][]Address{}
+	for _, a := range as {
+		am[a.UserID] = append(am[a.UserID], a)
+	}
+
+	for i := range us {
+		us[i].Addresses = am[us[i].ID]
+	}
+
 	pp.Println(us)
 }
 
@@ -43,6 +69,8 @@ type User struct {
 	CreatedAt time.Time    `db:"created_at"`
 	UpdatedAt time.Time    `db:"updated_at"`
 	DeletedAt sql.NullTime `db:"deleted_at"`
+
+	Addresses []Address
 }
 
 type Address struct {
