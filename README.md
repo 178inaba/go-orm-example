@@ -1,7 +1,6 @@
 # Go ORM Example
 
 This repository is example of Go ORM.  
-Use as example in Lightning Talk on [DeNA.go #4](https://dena.connpass.com/event/160018/).
 
 - [gorm](https://github.com/jinzhu/gorm)
 - [gorp](https://github.com/go-gorp/gorp)
