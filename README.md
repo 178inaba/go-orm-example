@@ -20,4 +20,5 @@ $ mysql -u root -h 127.0.0.1 go_orm_example < misc/queries/test_data.sql
 
 ## Author
 
-[178inaba](https://github.com/178inaba)
+Masahiro Furudate (a.k.a. [178inaba](https://github.com/178inaba))  
+<178inaba.git@gmail.com>
